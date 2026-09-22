@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="김소령의 2026 포트폴리오 시안 두 가지를 비교합니다.">
+  <meta name="theme-color" content="#111111">
+  <title>김소령 · 2026 포트폴리오 비교</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23111111'/%3E%3Cpath d='M8 8h5v7l6-7h6l-8 9 8 7h-7l-5-5v5H8z' fill='%23b9ff66'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", Arial, sans-serif;
+      background: #111;
+      color: #f5f5f5;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: clamp(1.5rem, 5vw, 5rem);
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at 90% 10%, #273729 0, transparent 35%), #111;
+    }
+
+    main { width: min(1100px, 100%); }
+
+    header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: clamp(2rem, 6vw, 4.5rem);
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid #3a3a3a;
+    }
+
+    .label {
+      margin: 0 0 .7rem;
+      color: #b9ff66;
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 7vw, 6rem);
+      line-height: .98;
+      letter-spacing: -.06em;
+    }
+
+    header > p {
+      max-width: 25rem;
+      margin: 0;
+      color: #b8b8b8;
+      line-height: 1.7;
+      word-break: keep-all;
+    }
+
+    .versions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .version {
+      min-height: 21rem;
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #3a3a3a;
+      border-radius: 1.25rem;
+      color: inherit;
+      text-decoration: none;
+      transition: transform .18s ease, border-color .18s ease, background-color .18s ease;
+    }
+
+    .version:hover,
+    .version:focus-visible {
+      transform: translateY(-4px);
+      border-color: #b9ff66;
+      background: #181d17;
+      outline: none;
+    }
+
+    .version-number {
+      margin: 0 0 auto;
+      color: #b9ff66;
+      font-size: .8rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+    }
+
+    h2 {
+      margin: 2rem 0 .8rem;
+      font-size: clamp(1.6rem, 4vw, 2.8rem);
+      letter-spacing: -.04em;
+    }
+
+    .version p:not(.version-number) {
+      margin: 0;
+      color: #b8b8b8;
+      line-height: 1.7;
+      word-break: keep-all;
+    }
+
+    .open {
+      margin-top: 2rem;
+      color: #f5f5f5;
+      font-weight: 700;
+    }
+
+    @media (max-width: 720px) {
+      header { align-items: start; flex-direction: column; }
+      .versions { grid-template-columns: 1fr; }
+      .version { min-height: 17rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .version { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <p class="label">2026 PORTFOLIO</p>
+        <h1>두 가지 구성안</h1>
+      </div>
+      <p>내용과 구조가 다른 두 버전을 각각 보관했습니다. 원하는 안을 선택해 확인할 수 있습니다.</p>
+    </header>
+
+    <section class="versions" aria-label="포트폴리오 버전 선택">
+      <a class="version" href="../">
+        <p class="version-number">VERSION 01</p>
+        <h2>초기 구성안</h2>
+        <p>이력서처럼 빠르게 읽히는 단정한 구성입니다. 핵심 수치와 대표 프로젝트에 집중합니다.</p>
+        <span class="open">사이트 보기 →</span>
+      </a>
+
+      <a class="version" href="../classic/">
+        <p class="version-number">VERSION 02</p>
+        <h2>기존 디자인 반영안</h2>
+        <p>기존 포트폴리오의 컬러와 분위기를 살리고, 프로젝트와 웹·디자인 아카이브까지 확장했습니다.</p>
+        <span class="open">사이트 보기 →</span>
+      </a>
+    </section>
+  </main>
+</body>
+</html>
