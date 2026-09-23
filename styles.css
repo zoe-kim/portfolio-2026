@@ -204,6 +204,13 @@ h1 {
   border-top: 2px solid var(--ink);
 }
 
+.application-target {
+  margin: 1.4rem 0 0;
+  color: var(--accent);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
 .metrics div {
   display: flex;
   align-items: baseline;
@@ -349,6 +356,39 @@ h1 {
   font-weight: 700;
 }
 
+.project-story {
+  display: grid;
+  grid-template-columns: 5.5rem minmax(0, 1fr);
+  gap: 0.9rem 1rem;
+  margin: 1.5rem 0;
+}
+
+.project-story dt {
+  font-weight: 700;
+}
+
+.project-story dd {
+  margin: 0;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+.project-story ul {
+  margin: 0;
+}
+
+.evidence-note,
+.scope-note {
+  padding: 1rem;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.scope-note {
+  margin: 1.5rem 0 0 4rem;
+}
+
 .timeline {
   margin-left: 4rem;
   border-top: 2px solid var(--ink);
@@ -455,7 +495,8 @@ h1 {
 
   .profile-statements,
   .timeline,
-  .capability-grid {
+  .capability-grid,
+  .scope-note {
     margin-left: 0;
   }
 
@@ -474,6 +515,15 @@ h1 {
 }
 
 @media (max-width: 480px) {
+  .project-story {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .project-story dd + dt {
+    margin-top: 0.8rem;
+  }
+
   .wordmark {
     display: none;
   }
@@ -492,7 +542,12 @@ h1 {
 }
 
 @media print {
-  :root {
+  :root,
+  :root[data-theme="dark"] {
+    color-scheme: light;
+    --accent: #2447cc;
+    --accent-soft: #e9eeff;
+    --bg: #ffffff;
     --paper: #ffffff;
     --ink: #000000;
     --muted: #444444;
